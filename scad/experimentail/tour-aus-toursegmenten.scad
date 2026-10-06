@@ -570,9 +570,16 @@ for (i = [0 : max_idx - 1]) {
     //translate([p0.x-52.2977, p0.y-9.43258, 0])
     //  cube([0.0004, 0.0004, 0.0002 * 10]);
     
-    segment_base(x0=p0.x, y0=p0.y, 
+/*    segment_base(x0=p0.x, y0=p0.y, 
                  x1=p1.x, y1=p1.y, 
                  height=h, thickness=0.2);
+  */  
+    
+    segment_with_overhang(x0=p0.x, y0=p0.y, 
+                 x1=p1.x, y1=p1.y, 
+                 height=h, thickness=0.2,
+                 overhang_height_max=0.2, overhang_height_min=0.1, 
+                 oberhang_width=0.2);    
 
 
 }
